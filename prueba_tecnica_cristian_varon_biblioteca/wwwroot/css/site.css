@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #1a1c1e;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -28,4 +29,49 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+/* Configuración de la barra lateral */
+.sidebar {
+    height: 100vh; /* Altura de toda la pantalla */
+    background-color: #1a1c1e; /* El color que te gustó */
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px;
+}
+
+.main-content {
+    margin-left: 16.666667%;
+    background-color: #1a1c1e;
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+.nav-link-custom {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.nav-link-custom:hover {
+    background: rgba(0, 242, 254, 0.1);
+    color: #00f2fe; 
+}
+
+.navbar-brand-custom {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00f2fe;
+    text-decoration: none;
+    letter-spacing: 3px;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
 }
