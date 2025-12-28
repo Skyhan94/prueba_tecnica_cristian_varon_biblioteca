@@ -26,20 +26,19 @@ Biblioteca Codex es una plataforma de gestión administrativa diseñada para cen
 * git clone
  https://github.com/Skyhan94/prueba_tecnica_cristian_varon_biblioteca
 
-### 2. Configurar la cadena de conexion
-* Abre el archivo appsettings.json reemplaza los datos de la base de datos (Server y Database) en el siguiente codigo y luego reemplazalo en el archivo. Solo deben revisar en su Sql Server el nombre del servidor, el nombre del database lo pueden dejar asi, entity framework se encargara de crear la base de datos si no existe con el paso siguiente.
+### 2. Configurar la Base de Datos (Script SQL)
 
+ Para asegurar la compatibilidad, se incluye un script manual:
+
+  * Abre SQL Server Management Studio (SSMS).
+  * Abre el archivo adjunto script_db.sql que se encuentra en la raíz del proyecto.
+  * Ejecútalo (F5). Esto creará la base de datos y las tablas necesarias
+
+### 3. Configurar la cadena de conexion
+* Abre el archivo appsettings.json reemplaza los datos del servidor (Server) en el siguiente codigo y luego reemplazalo en el archivo. Solo deben revisar en su Sql Server el nombre del servidor.
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=BibliotecaCodexDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=DESKTOP-97TFVOB\\SQLEXPRESS;Database=gestor_biblioteca;User Id=desarrollador_prueba;Password=prueba_1234;TrustServerCertificate=True"
   }
-
-### 3. Crear la Base de Datos (Migraciones)
-Una vez abierto el proyecto en Visual Studio, sigue estos pasos para generar la estructura de tablas y relaciones:
-
-* Abre la Consola del Administrador de Paquetes (Menú: Herramientas -> Administrador de Paquetes NuGet -> Consola del Administrador de Paquetes).
-* Ejecuta el siguiente comando: Update-Database
-
-Nota: Este paso requiere que tengas instalado el SDK de .NET y las herramientas de Entity Framework (incluidas en el proyecto).
 
 ### 4. Ejecutar pulsando la tecla F5
 
