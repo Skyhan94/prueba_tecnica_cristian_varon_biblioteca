@@ -81,7 +81,7 @@ namespace prueba_tecnica_cristian_varon_biblioteca.Controllers
             {
                 return NotFound();
             }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "AutorId", libro.AutorId);
+            ViewData["AutorId"] = new SelectList(_context.Autores, "AutorId", "Nombre", libro.AutorId);
             return View(libro);
         }
 

@@ -19,7 +19,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-color: #ffcd87;
+    background: #e2c7b2;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -31,81 +31,110 @@ body {
   text-align: start;
 }
 
+h1, h2, .control-label {
+    font-weight: 700;
+    color: #3a2e25;
+    text-align: center;
+}
+
 
 .sidebar {
     height: 95vh;
-    background-color: #f1e6cf;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #d6b49c;
     position: fixed;
     top: 2.5vh;
     left: 10px;
     z-index: 100;
-    padding: 20px;
     border-radius: 15px;
 }
 
 .main-content {
     margin-left: 16.666667%;
-    background-color: #ffcd87;
-    min-height: 100vh;
+    background: #e2c7b2;
     padding-top: 2rem;
 }
 
 .nav-link-custom {
-    color: #8d7b63;
+    color: #6d5f4b;
     text-decoration: none;
     display: block;
     padding: 12px 15px;
     border-radius: 10px;
     margin-bottom: 10px;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .nav-link-custom:hover {
-    background: rgba(0, 242, 254, 0.1);
-    color: #00f2fe; 
+    background: rgba(250, 244, 238, 0.8);
+    color: #8d7b63;
+}
+
+.nav-link-custom.active {
+    background: rgba(250, 244, 238, 0.8);
+    color: #8d7b63;
+}
+
+.nav-link-custom:active {
+    background: rgba(250, 244, 238, 0.8);
+    color: #8d7b63;
 }
 
 .navbar-brand-custom {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #00f2fe;
+    color: #3a2e25 !important;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     display: block;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.btn-premium {
-    background: linear-gradient(45deg, #00f2fe, #4facfe);
-    color: #ffffff !important;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 50px;
+.btn-primary {
+    background: #f8e2cf;
+    border: 1px solid #e2a47a;
+    padding: 3px 10px;
+    border-radius: 8px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
     cursor: pointer;
+    color: #e2a47a;
+    font-size: 12px;
+}
+
+.btn-primary:hover {
+    background: #f5a03f;
+    color: #f9f2ed;
+    border: none;
+}
+
+.btn-premium {
+    background-color: #ffa726;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 167, 38, 0.35);
+    transition: all 0.25s ease;
+    color: #f9f2ed;
 }
 
 .btn-premium:hover {
+    background-color: #fbbc00;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
-    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(255, 140, 0, 0.45);
 }
 
 .btn-premium:active {
     transform: translateY(0);
 }
 
-/* Contenedor de la tabla con efecto cristal */
 .table-container-glass {
-    background: rgba(249, 242, 237, 0.6);
-    backdrop-filter: blur(12px); 
-    border: 1px solid rgba(0, 242, 254, 0.2); 
+    background: #f1e8e8;
+    backdrop-filter: blur(12px);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 32px 0 rgba(249, 242, 237, 0.35);
@@ -120,23 +149,23 @@ body {
 
 .table-custom thead th {
     background: transparent;
-    color: #00f2fe;
+    color: #8d7b63;
     border: none;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1px;
     padding-bottom: 15px;
+    font-size: 20px;
 }
 
 .table-body tr td {
-    background-color: rgba(45, 45, 45, 0.4);
+    background: transparent;
     transition: all 0.3s ease;
-    color: #e0e0e0;
+    color: #8d7b63;
 }
 
 .table-body tr:hover {
-    background-color: rgba(0, 242, 254, 0.1);
-    box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
+    background: rgba(249, 242, 237, 0.7);
 }
 
 .table-custom td {
@@ -144,15 +173,75 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.action-link {
-    color: #4facfe;
-    text-decoration: none;
-    margin: 0 5px;
-    font-size: 0.9rem;
-    transition: 0.2s;
+.table-body th:not(:last-child) {
+    border-bottom: 1px solid rgba(120, 90, 60, 0.15);
 }
 
-.action-link:hover {
-    color: #00f2fe;
-    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+.table-striped-soft tr:nth-child(odd) {
+    background-color: rgba(250, 244, 238, 0.55);
+}
+
+.table-striped-soft tr:nth-child(even) {
+    background-color: rgba(249, 242, 237, 0.35); 
+}
+
+.table-striped-soft tr:hover {
+    background-color: rgba(230, 200, 170, 0.35);
+    transition: background-color 0.3s ease;
+}
+
+/*Pagina de inicio*/
+.row-container {
+    display: flex;
+    justify-content: center;
+}
+.text-brown {
+    color: #3a2e25 !important;
+}
+
+.letter-spacing {
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+/* Estilo de la Tarjeta */
+.card-stat {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-stat:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* El Icono Grande */
+.icon-shape {
+    opacity: 0.2;
+    color: #3a2e25;
+    transition: 0.3s;
+}
+
+.card-stat:hover .icon-shape {
+    opacity: 1;
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.shadow-brown i {
+    color: #3a2e25;
+}
+
+.hover-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.hover-link:hover {
+    padding-left: 10px;
+    filter: brightness(1.2);
 }
